@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario </title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <script src="index.js"></script>
+
+    <script> var caracteres = "12346789";
+        var contraseña = "";
+        for (i=0; i<6; i++) contraseña +=caracteres.charAt(Math.floor(Math.random()*caracteres.length)); 
+
+        var respuesta = contraseña;
+
+        function doc(){
+    document.write(respuesta);}
+        
+        </script>
+
+    <form action=""method="post" id="form"> 
+        <div class="form">
+            <h1>REGISTRO</h1>
+            <div class="grupo">
+                <input type="text" name="" id="name" required><span class="barra"></span>
+                <label for="">Nombre</label>
+            </div>
+            
+            <div class="grupo">
+                <input type="email" name="" id="name" required><span class="barra"></span>
+                <label for="">Email</label>
+            </div>
+
+
+
+            <div class="grupo">
+                <label id="name" required><span class="barra"></span></label>
+                <label >Número</label>
+                <br><br>
+                <p><script>doc(respuesta)</script></p>
+
+
+            </div>
+
+
+
+
+            <button type="submit">Validar</button>
+            <p class="warnings" id="warnings"></p>
+        </div>
+    </form>
+</body>
+</html>
